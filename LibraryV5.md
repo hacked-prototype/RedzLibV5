@@ -287,6 +287,20 @@ DiscordInvite:Destroy()
 DiscordInvite:Visible(false)
 ```
 
+### Minimize Button
+#### Add Minimize Button
+```lua
+Window:AddMinimizeButton({
+    Corner = {
+        CornerRadius = UDim.new(0.5, 0)
+    },
+    Stroke = {},
+    Button = {
+        Image = "rbxassetid://15298567397"
+    }
+})
+```
+
 ### Dialog
 #### Make a Dialog
 ```lua
