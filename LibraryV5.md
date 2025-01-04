@@ -6,11 +6,11 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/realr
 ### Library's Functions
 ```lua
 -- Get Icon
--- For get icons, see Icons.lua
+-- For get icons, see lib/Icons.lua
 Library:GetIcon("Home")
 
 -- Set Theme
-Library:SetTheme("Purple") -- see Source.lua file, Line 12
+Library:SetTheme("Purple") -- See lib/Themes.lua
 
 -- Set Window's Scale
 Library:SetScale(1)
@@ -47,7 +47,7 @@ Window:SelectTab("Tab Name")
 ```lua
 local Tab = Window:MakeTab({
     Title = "Tab",
-    Icon = "Home" -- View Icons.lua
+    Icon = "Home" -- See lib/Icons.lua
 })
 ```
 ### Tab's Functions
@@ -296,6 +296,10 @@ Window:AddMinimizeButton({
     },
     Stroke = {},
     Button = {
+        --[[
+            Only accepts Image ID not Decal ID.
+            If you use Decal ID, try to convert to Image ID
+        --]]
         Image = "rbxassetid://15298567397"
     }
 })
