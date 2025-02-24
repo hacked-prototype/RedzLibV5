@@ -11,7 +11,7 @@ local PlayerMouse = Player:GetMouse()
 local LibraryRawUrl = "https://raw.githubusercontent.com/hacked-prototype/RedzLibV5/main"
 
 local redzlib = {
-	Themes = loadstring(game:HttpGet(LibraryRawUrl .. "/lib/Themes.lua")),
+	Themes = loadstring(game:HttpGetAsync(LibraryRawUrl .. "/lib/Themes.lua"))(),
 	Info = {
 		Version = "1.1.0"
 	},
@@ -27,7 +27,7 @@ local redzlib = {
 	Options = {},
 	Flags = {},
 	Tabs = {},
-	Icons = loadstring(game:HttpGet(LibraryRawUrl .. "/lib/Icons.lua"))()
+	Icons = loadstring(game:HttpGetAsync(LibraryRawUrl .. "/lib/Icons.lua"))()
 }
 
 local ViewportSize = workspace.CurrentCamera.ViewportSize
